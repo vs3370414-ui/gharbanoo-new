@@ -252,6 +252,33 @@ export function Home() {
                     </button>
                   </div>
                 </motion.div>
+
+                {/* Local Shop Card */}
+                <motion.div 
+                  initial={{ x: -20, y: 20, opacity: 0 }}
+                  animate={{ x: -150, y: 110, opacity: 1 }}
+                  transition={{ delay: 1.1, duration: 0.6 }}
+                  className="absolute bg-white p-4 rounded-2xl shadow-2xl border border-gray-100 z-30 w-52"
+                >
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 bg-amber-50 rounded-lg shrink-0 flex items-center justify-center border border-amber-100">
+                      <Store className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="text-xs font-bold text-dark">Durga Hardware</h4>
+                      <p className="text-[10px] text-primary font-bold">Cement & Hardware Store</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-1">
+                      <Star className="w-3 h-3 fill-accent text-accent" />
+                      <span className="text-[10px] font-bold text-dark">4.8 (32)</span>
+                    </div>
+                    <button className="bg-primary text-white p-1.5 rounded-lg">
+                      <Phone className="w-3 h-3" />
+                    </button>
+                  </div>
+                </motion.div>
               </div>
             </motion.div>
           </div>
