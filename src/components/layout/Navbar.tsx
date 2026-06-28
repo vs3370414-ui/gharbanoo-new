@@ -9,7 +9,7 @@ export function Navbar() {
 
   const links = [
     { nameEn: 'Home', nameHi: 'होम', path: '/' },
-    { nameEn: 'House Plans', nameHi: 'हाउस प्लान', path: '/house-plans' },
+    { nameEn: 'Find Shops', nameHi: 'दुकानें खोजें', path: '/find-shops' },
     { nameEn: 'Find Experts', nameHi: 'एक्सपर्ट्स', path: '/find-services' },
     { nameEn: 'Join as Expert', nameHi: 'एक्सपर्ट बनें', path: '/join-provider' },
     { nameEn: 'About', nameHi: 'बारे में', path: '/about' },

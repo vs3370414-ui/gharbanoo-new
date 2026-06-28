@@ -29,7 +29,7 @@ export function Footer() {
             <h3 className="text-accent font-heading font-bold uppercase tracking-widest text-sm">Quick Links</h3>
             <ul className="space-y-4">
               <li><Link to="/" className="text-base font-medium hover:text-accent transition-all flex items-center gap-2 underline underline-offset-4 decoration-white/20 hover:decoration-accent">Home</Link></li>
-              <li><Link to="/house-plans" className="text-base font-medium hover:text-accent transition-all flex items-center gap-2 underline underline-offset-4 decoration-white/20 hover:decoration-accent">House Plans</Link></li>
+              <li><Link to="/find-shops" className="text-base font-medium hover:text-accent transition-all flex items-center gap-2 underline underline-offset-4 decoration-white/20 hover:decoration-accent">Find Shops</Link></li>
               <li><Link to="/find-services" className="text-base font-medium hover:text-accent transition-all flex items-center gap-2 underline underline-offset-4 decoration-white/20 hover:decoration-accent">Find Experts</Link></li>
               <li><Link to="/join-provider" className="text-base font-medium hover:text-accent transition-all flex items-center gap-2 underline underline-offset-4 decoration-white/20 hover:decoration-accent">Join as Expert</Link></li>
               <li><Link to="/about" className="text-base font-medium hover:text-accent transition-all flex items-center gap-2 underline underline-offset-4 decoration-white/20 hover:decoration-accent">About Us</Link></li>
@@ -42,7 +42,7 @@ export function Footer() {
           <div className="space-y-6">
             <h3 className="text-accent font-heading font-bold uppercase tracking-widest text-sm">Our Services</h3>
             <ul className="space-y-4">
-              <li><Link to="/find-services" className="text-base font-medium hover:text-accent transition-all">House Plans</Link></li>
+              <li><Link to="/find-shops" className="text-base font-medium hover:text-accent transition-all">Find Shops</Link></li>
               <li><Link to="/find-services" className="text-base font-medium hover:text-accent transition-all">Contractors</Link></li>
               <li><Link to="/find-services" className="text-base font-medium hover:text-accent transition-all">Plumbers</Link></li>
               <li><Link to="/find-services" className="text-base font-medium hover:text-accent transition-all">Electricians</Link></li>

@@ -23,7 +23,8 @@ import {
   Users,
   Layout,
   Smartphone,
-  CheckCircle2
+  CheckCircle2,
+  Store
 } from 'lucide-react';
 
 export function Home() {
@@ -72,17 +73,17 @@ export function Home() {
               
               <motion.div variants={itemVariants} className="space-y-3">
                 <p className="text-lg text-gray-900 leading-relaxed max-w-xl font-medium">
-                  Find and compare house plan experts, contractors, plumbers, electricians, carpenters, painters and more — all in one place. Connect directly. Zero commission. Always free.
+                  Find and compare local material shops, contractors, plumbers, electricians, carpenters, painters and more — all in one place. Connect directly. Zero commission. Always free.
                 </p>
                 <p className="text-sm text-gray-500 leading-relaxed max-w-xl italic">
-                  हाउस प्लान एक्सपर्ट्स, कांट्रेक्टर्स, प्लंबर, इलेक्ट्रिशियन, कारपेंटर और बहुत कुछ खोजें। सीधे संपर्क करें। जीरो कमीशन। हमेशा मुफ्त।
+                  लोकल मटेरियल दुकानें, कांट्रेक्टर्स, प्लंबर, इलेक्ट्रिशियन, कारपेंटर और बहुत कुछ खोजें। सीधे संपर्क करें। जीरो कमीशन। हमेशा मुफ्त।
                 </p>
               </motion.div>
               
               <motion.div variants={itemVariants} className="space-y-4">
                 <div className="flex flex-wrap gap-3">
                   {[
-                    { en: '📐 House Plans', hi: 'घर का नक्शा' },
+                    { en: '🏪 Local Shops', hi: 'लोकल दुकानें' },
                     { en: '👷 Expert Consultation', hi: 'एक्सपर्ट सलाह' },
                     { en: '🔧 Home Services', hi: 'होम सर्विसेज' }
                   ].map((pill) => (
@@ -114,9 +115,9 @@ export function Home() {
                   <span className="text-lg flex items-center gap-2">Find Experts Now <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" /></span>
                   <span className="text-xs opacity-80">एक्सपर्ट्स खोजें</span>
                 </Link>
-                <Link to="/house-plans" className="inline-flex flex-col items-center justify-center px-8 py-3 bg-accent text-dark font-black rounded-2xl shadow-lg shadow-accent/20 hover:bg-opacity-90 hover:shadow-xl transition-all active:scale-95 leading-tight">
-                  <span className="text-lg">Get House Plan</span>
-                  <span className="text-xs opacity-70">घर का नक्शा पाएं</span>
+                <Link to="/find-shops" className="inline-flex flex-col items-center justify-center px-8 py-3 bg-accent text-dark font-black rounded-2xl shadow-lg shadow-accent/20 hover:bg-opacity-90 hover:shadow-xl transition-all active:scale-95 leading-tight">
+                  <span className="text-lg">Find Local Shops</span>
+                  <span className="text-xs opacity-70">दुकानें खोजें</span>
                 </Link>
               </motion.div>
               
@@ -270,10 +271,10 @@ export function Home() {
             {[
               { emoji: '😤', titleEn: 'Where do I find a reliable plumber?', titleHi: 'भरोसेमंद प्लंबर कहाँ मिलेगा?', descEn: 'You ask neighbours, get 2-3 numbers, no one picks up, or they overcharge', descHi: 'आप पड़ोसियों से पूछते हैं, 2-3 नंबर मिलते हैं, कोई फोन नहीं उठाता या ज्यादा पैसे मांगता है' },
               { emoji: '💸', titleEn: 'Am I being overcharged?', titleHi: 'क्या मुझसे ज्यादा पैसे लिए जा रहे हैं?', descEn: 'No way to compare prices. No way to know the market rate. You just have to trust blindly.', descHi: 'कीमतों की तुलना करने का कोई तरीका नहीं है। आपको बस आँख बंद करके ज़िक्र करना पड़ता है।' },
-              { emoji: '📋', titleEn: 'Who will make my house plan?', titleHi: 'मेरा हाउस प्लान कौन बनाएगा?', descEn: 'Finding an affordable civil engineer or architect in small towns is nearly impossible.', descHi: 'छोटे शहरों में किफायती सिविल इंजीनियर या आर्किटेक्ट ढूंढना लगभग नामुमकिन है।' },
+              { emoji: '📋', titleEn: 'Where to buy quality materials?', titleHi: 'अच्छी निर्माण सामग्री कहाँ से खरीदें?', descEn: 'Finding reliable local cement, paint, and hardware shops with fair prices is difficult.', descHi: 'उचित दामों पर विश्वसनीय सीमेंट, पेंट और हार्डवेयर की दुकान ढूंढना मुश्किल है।' },
               { emoji: '📸', titleEn: 'Show me your previous work', titleHi: 'अपना पिछला काम दिखाओ', descEn: 'Workers spend hours searching their gallery for photos. Often lose the customer.', descHi: 'कारीगर फोटो ढूंढने में घंटों बिताते हैं। अक्सर कस्टमर हाथ से निकल जाता है।' },
               { emoji: '🤝', titleEn: 'How do I know I can trust them?', titleHi: 'मैं उन पर भरोसा कैसे करूँ?', descEn: 'No reviews, no ratings, no verification. Just word of mouth which is not always reliable.', descHi: 'कोई रेटिंग या वेरिफिकेशन नहीं। सिर्फ सुनी-सुनाई बातें, जो हमेशा सही नहीं होतीं।' },
-              { emoji: '😵', titleEn: 'Too many steps to build a home', titleHi: 'घर बनाने के बहुत सारे झंझट', descEn: 'House plan, contractor, plumber, electrician, painter — you have to find each one separately.', descHi: 'नक्शा, कांट्रेक्टर, प्लंबर, बिजली मिस्त्री, पेंटर — सबको अलग-अलग ढूंढना पड़ता है।' }
+              { emoji: '😵', titleEn: 'Too many steps to build a home', titleHi: 'घर बनाने के बहुत सारे झंझट', descEn: 'Materials, contractor, plumber, electrician, painter — you have to find each one separately.', descHi: 'सामग्री, कांट्रेक्टर, प्लंबर, बिजली मिस्त्री, पेंटर — सबको अलग-अलग ढूंढना पड़ता है।' }
             ].map((p, i) => (
               <motion.div 
                 key={i}
@@ -325,7 +326,7 @@ export function Home() {
 
           <div className="flex md:grid md:grid-cols-3 gap-8 overflow-x-auto pb-8 md:pb-0 scrollbar-hide snap-x">
              {[
-               { icon: PenTool, titleEn: 'House Plans', titleHi: 'घर का नक्शा', descEn: 'Get affordable 2D & 3D house plans from expert civil engineers', descHi: 'सिविल इंजीनियर्स से किफायती 2D और 3D हाउस प्लान पाएं', priceEn: 'Starting ₹3 /sq ft', priceHi: '₹3 प्रति वर्ग फुट से शुरू', badgeEn: 'LIVE NOW', badgeHi: 'लाइव', linkEn: 'Find Planners', linkHi: 'नक्शा बनाने वाले खोजें' },
+               { icon: Store, titleEn: 'Find Local Shops', titleHi: 'स्थानीय दुकानें', descEn: 'Find local stores for cement, hardware, electricals, paint and marble in Jhanjharpur', descHi: 'सीमेंट, हार्डवेयर, इलेक्ट्रिकल, पेंट और मार्बल की स्थानीय दुकानें खोजें', priceEn: 'Verified local businesses', priceHi: 'वेरिफाइड स्थानीय दुकानें', badgeEn: 'LIVE NOW', badgeHi: 'लाइव', linkEn: 'Find Shops', linkHi: 'दुकानें खोजें', path: '/find-shops' },
                { icon: HardHat, titleEn: 'Contractors', titleHi: 'कांट्रेक्टर्स', descEn: 'Find verified contractors to manage your complete construction', descHi: 'निर्माण कार्य संभालने के लिए वेरिफाइड कांट्रेक्टर्स खोजें', priceEn: 'Fixed price projects', priceHi: 'फिक्स्ड प्राइस प्रोजेक्ट्स', badgeEn: 'LIVE NOW', badgeHi: 'लाइव', linkEn: 'Find Contractors', linkHi: 'कांट्रेक्टर्स खोजें' },
                { icon: Droplet, titleEn: 'Plumbers', titleHi: 'प्लंबर', descEn: 'Compare plumbers by rating, experience and price', descHi: 'रेटिंग, अनुभव और कीमत के आधार पर प्लंबर की तुलना करें', priceEn: 'Daily / Project basis', priceHi: 'प्रति दिन या प्रोजेक्ट के आधार पर', badgeEn: 'LIVE NOW', badgeHi: 'लाइव', linkEn: 'Find Plumbers', linkHi: 'प्लंबर खोजें' },
                { icon: Zap, titleEn: 'Electricians', titleHi: 'इलेक्ट्रिशियन', descEn: 'Verified electricians for safe wiring and all electrical work', descHi: 'सुरक्षित वायरिंग और सभी बिजली कार्यों के लिए वेरिफाइड मिस्त्री', priceEn: 'Modern wiring experts', priceHi: 'आधुनिक वायरिंग एक्सपर्ट्स', badgeEn: 'LIVE NOW', badgeHi: 'लाइव', linkEn: 'Find Electricians', linkHi: 'इलेक्ट्रिशियन खोजें' },
@@ -358,7 +359,7 @@ export function Home() {
                     </div>
                   </div>
                   {s.linkEn ? (
-                    <Link to="/find-services" className="mt-8 flex flex-col group">
+                    <Link to={s.path || "/find-services"} className="mt-8 flex flex-col group">
                       <div className="inline-flex items-center text-primary font-bold hover:gap-2 transition-all">
                         {s.linkEn} <ChevronRight className="w-5 h-5" />
                       </div>

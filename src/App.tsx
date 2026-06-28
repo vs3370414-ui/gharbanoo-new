@@ -6,7 +6,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Layout } from './components/layout/Layout';
 import { Home } from './pages/Home';
-import { HousePlans } from './pages/HousePlans';
+import { FindShops } from './pages/FindShops';
 import { FindServices } from './pages/FindServices';
 import { JoinProvider } from './pages/JoinProvider';
 import { About } from './pages/About';
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       { index: true, element: <Home /> },
-      { path: "house-plans", element: <HousePlans /> },
+      { path: "find-shops", element: <FindShops /> },
       { path: "find-services", element: <FindServices /> },
       { path: "join-provider", element: <JoinProvider /> },
       { path: "about", element: <About /> },
