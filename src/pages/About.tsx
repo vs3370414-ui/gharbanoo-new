@@ -99,17 +99,9 @@ export function About() {
 
       {/* Founder */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-[2rem] shadow-xl overflow-hidden border border-gray-100 flex flex-col md:flex-row">
-            <div className="md:w-2/5 bg-gray-200">
-              <img 
-                src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&q=80&w=600&h=800" 
-                alt="Sushant Shivam" 
-                className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
-              />
-            </div>
-            <div className="md:w-3/5 p-10 flex flex-col justify-center space-y-6">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-[2rem] shadow-xl overflow-hidden border border-gray-100">
+            <div className="p-10 md:p-16 flex flex-col justify-center space-y-6">
               <div className="space-y-1">
                 <div className="uppercase tracking-widest text-[10px] font-black text-primary px-3 py-1 bg-red-50 inline-block rounded-full">Founder / संस्थापक</div>
                 <h3 className="text-3xl font-heading font-bold text-gray-900">Sushant Shivam</h3>
