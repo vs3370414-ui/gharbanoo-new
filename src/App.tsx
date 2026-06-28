@@ -11,6 +11,7 @@ import { FindServices } from './pages/FindServices';
 import { JoinProvider } from './pages/JoinProvider';
 import { About } from './pages/About';
 import { Contact } from './pages/Contact';
+import { Privacy } from './pages/Privacy';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
       { path: "join-provider", element: <JoinProvider /> },
       { path: "about", element: <About /> },
       { path: "contact", element: <Contact /> },
+      { path: "privacy", element: <Privacy /> },
     ],
   },
 ]);

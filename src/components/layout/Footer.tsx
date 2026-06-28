@@ -34,6 +34,7 @@ export function Footer() {
               <li><Link to="/join-provider" className="text-base font-medium hover:text-accent transition-all flex items-center gap-2 underline underline-offset-4 decoration-white/20 hover:decoration-accent">Join as Expert</Link></li>
               <li><Link to="/about" className="text-base font-medium hover:text-accent transition-all flex items-center gap-2 underline underline-offset-4 decoration-white/20 hover:decoration-accent">About Us</Link></li>
               <li><Link to="/contact" className="text-base font-medium hover:text-accent transition-all flex items-center gap-2 underline underline-offset-4 decoration-white/20 hover:decoration-accent">Contact</Link></li>
+              <li><Link to="/privacy" className="text-base font-medium hover:text-accent transition-all flex items-center gap-2 underline underline-offset-4 decoration-white/20 hover:decoration-accent">Privacy Policy</Link></li>
             </ul>
           </div>
 
@@ -81,6 +82,9 @@ export function Footer() {
           <p className="text-sm font-medium text-white/40">
             © 2026 Gharbanoo | Built with ❤️ in Jhanjharpur, Bihar
           </p>
+          <div className="flex items-center gap-4 text-sm font-medium text-white/40">
+            <Link to="/privacy" className="hover:text-accent transition-colors">Privacy Policy</Link>
+          </div>
         </div>
       </div>
     </footer>
