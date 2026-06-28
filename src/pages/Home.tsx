@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
+import { GooglePlayButton } from '../components/GooglePlayButton';
 import { 
   Home as HomeIcon, 
   Heart, 
@@ -110,7 +111,7 @@ export function Home() {
                 </div>
               </motion.div>
               
-              <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 pt-4">
+              <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 pt-4 items-stretch sm:items-center">
                 <Link to="/find-services" className="inline-flex flex-col items-center justify-center px-8 py-3 bg-primary text-white font-bold rounded-2xl shadow-lg shadow-primary/20 hover:bg-primary-dark hover:shadow-xl transition-all group active:scale-95 leading-tight">
                   <span className="text-lg flex items-center gap-2">Find Experts Now <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" /></span>
                   <span className="text-xs opacity-80">एक्सपर्ट्स खोजें</span>
@@ -119,6 +120,7 @@ export function Home() {
                   <span className="text-lg">Find Local Shops</span>
                   <span className="text-xs opacity-70">दुकानें खोजें</span>
                 </Link>
+                <GooglePlayButton className="h-full" />
               </motion.div>
               
               <motion.div variants={itemVariants} className="flex flex-col gap-4 pt-2">

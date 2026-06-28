@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { Heart, Home, MapPin, Phone, Mail } from 'lucide-react';
+import { Heart, Home, MapPin, Phone } from 'lucide-react';
+import { GooglePlayButton } from '../GooglePlayButton';
 
 export function Footer() {
   return (
@@ -51,9 +52,9 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Contact & App Download */}
           <div className="space-y-6">
-            <h3 className="text-accent font-heading font-bold uppercase tracking-widest text-sm">Contact Us</h3>
+            <h3 className="text-accent font-heading font-bold uppercase tracking-widest text-sm">Contact & App</h3>
             <div className="space-y-4">
               <div className="flex items-center gap-4 bg-white/10 p-4 rounded-xl backdrop-blur-sm">
                 <div className="p-2 bg-accent rounded-lg text-dark">
@@ -72,6 +73,10 @@ export function Footer() {
                   <p className="text-base font-medium">Jhanjharpur, Bihar, India</p>
                   <p className="text-sm text-white/50 italic mt-1 font-semibold underline decoration-accent/30 decoration-2">"Currently serving Jhanjharpur only"</p>
                 </div>
+              </div>
+              <div className="pt-4 border-t border-white/5">
+                <p className="text-xs text-white/40 mb-2 font-bold uppercase tracking-wider">Download Our Android App</p>
+                <GooglePlayButton />
               </div>
             </div>
           </div>
