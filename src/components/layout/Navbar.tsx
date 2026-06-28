@@ -1,15 +1,11 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Heart, Home, LogIn, LogOut, User, ChevronDown, FileText } from 'lucide-react';
+import { Menu, X, Heart, Home } from 'lucide-react';
 import { cn } from '../../lib/utils';
-import { useAuth } from '../AuthProvider';
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
-  const { user, openAuthModal, logout } = useAuth();
 
   const links = [
     { nameEn: 'Home', nameHi: 'होम', path: '/' },
@@ -18,16 +14,6 @@ export function Navbar() {
     { nameEn: 'Join as Expert', nameHi: 'एक्सपर्ट बनें', path: '/join-provider' },
     { nameEn: 'About', nameHi: 'बारे में', path: '/about' },
   ];
-
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setIsDropdownOpen(false);
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
 
   return (
     <nav className="sticky top-0 z-50 w-full bg-white border-b border-gray-100 shadow-sm">
@@ -63,72 +49,6 @@ export function Navbar() {
           </div>
 
           <div className="hidden md:flex md:items-center md:space-x-4 lg:space-x-6">
-            {user ? (
-              <div className="relative" ref={dropdownRef}>
-                <button
-                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  className="flex items-center gap-2 text-sm font-medium text-dark hover:text-primary transition-colors focus:outline-none"
-                >
-                  {user.photoURL ? (
-                    <img src={user.photoURL} alt={user.displayName || 'User'} className="w-9 h-9 rounded-full border border-gray-200 shadow-sm" referrerPolicy="no-referrer" />
-                  ) : (
-                    <div className="w-9 h-9 bg-gray-50 border border-gray-200 rounded-full flex items-center justify-center shadow-sm">
-                      <User className="w-5 h-5 text-gray-400" />
-                    </div>
-                  )}
-                  <div className="hidden lg:flex flex-col items-start leading-none gap-0.5">
-                    <span className="max-w-[100px] truncate text-[13px] font-bold">{user.displayName?.split(' ')[0] || user.phoneNumber}</span>
-                    <span className="text-[10px] text-gray-500">My Account</span>
-                  </div>
-                  <ChevronDown className="w-4 h-4 text-gray-400" />
-                </button>
-
-                {isDropdownOpen && (
-                  <div className="absolute right-0 mt-2 w-52 bg-white rounded-xl shadow-xl border border-gray-100 py-1 z-50 animate-in fade-in slide-in-from-top-2">
-                    <div className="px-4 py-2 border-b border-gray-50 mb-1">
-                      <p className="text-sm font-bold text-dark truncate">{user.displayName || 'User'}</p>
-                      <p className="text-xs text-gray-400 truncate">{user.email || user.phoneNumber}</p>
-                    </div>
-                    <Link to="#" className="flex flex-col px-4 py-2 text-dark hover:bg-red-50 hover:text-primary transition-colors">
-                      <div className="flex items-center gap-2">
-                        <User className="w-4 h-4" />
-                        <span className="text-sm font-bold">My Profile</span>
-                      </div>
-                      <span className="text-[10px] pl-6 text-gray-500">मेरी प्रोफाइल</span>
-                    </Link>
-                    <Link to="#" className="flex flex-col px-4 py-2 text-dark hover:bg-red-50 hover:text-primary transition-colors">
-                      <div className="flex items-center gap-2">
-                        <FileText className="w-4 h-4" />
-                        <span className="text-sm font-bold">My Requests</span>
-                      </div>
-                      <span className="text-[10px] pl-6 text-gray-500">मेरी रिक्वेस्ट</span>
-                    </Link>
-                    <div className="border-t border-gray-50 my-1"></div>
-                    <button
-                      onClick={() => { logout(); setIsDropdownOpen(false); }}
-                      className="w-full flex flex-col px-4 py-2 text-primary hover:bg-red-50 transition-colors text-left"
-                    >
-                      <div className="flex items-center gap-2">
-                        <LogOut className="w-4 h-4" />
-                        <span className="text-sm font-bold">Sign Out</span>
-                      </div>
-                      <span className="text-[10px] pl-6 text-primary/70">साइन आउट</span>
-                    </button>
-                  </div>
-                )}
-              </div>
-            ) : null}
-
-            {!user && (
-              <button
-                onClick={openAuthModal}
-                className="flex flex-col items-center leading-none group text-dark hover:text-primary transition-colors mr-2"
-              >
-                <span className="text-sm font-bold">Sign In</span>
-                <span className="text-[10px] font-medium opacity-70">साइन इन</span>
-              </button>
-            )}
-
             <Link
               to="/find-services"
               className="inline-flex flex-col items-center justify-center px-5 py-2 border border-transparent rounded-lg text-white bg-primary hover:bg-primary-dark transition-all shadow-md hover:shadow-lg active:scale-95 leading-none"
@@ -154,22 +74,6 @@ export function Navbar() {
       {isOpen && (
         <div className="md:hidden bg-white border-b border-gray-100">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {user && (
-              <div className="flex items-center gap-3 px-3 py-3 mb-2 border-b border-gray-100">
-                {user.photoURL ? (
-                  <img src={user.photoURL} alt={user.displayName || 'User'} className="w-10 h-10 rounded-full" referrerPolicy="no-referrer" />
-                ) : (
-                  <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center">
-                    <User className="w-5 h-5 text-gray-500" />
-                  </div>
-                )}
-                <div className="overflow-hidden">
-                  <div className="font-bold text-gray-900 truncate text-[16px]">{user.displayName || user.phoneNumber}</div>
-                  <div className="text-[12px] text-gray-500">मेरे अकाउंट (My Account)</div>
-                </div>
-              </div>
-            )}
-            
             {links.map((link) => (
               <Link
                 key={link.nameEn}
@@ -189,56 +93,17 @@ export function Navbar() {
               </Link>
             ))}
             
-            {user ? (
-              <div className="space-y-1">
-                <Link to="#" className="flex flex-col px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-xl transition-all">
-                  <div className="flex items-center gap-3">
-                    <User className="w-5 h-5" />
-                    <span className="text-[16px]">My Profile</span>
-                  </div>
-                  <span className="text-[13px] pl-8 text-gray-500">मेरी प्रोफाइल</span>
-                </Link>
-                <Link to="#" className="flex flex-col px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-xl transition-all">
-                  <div className="flex items-center gap-3">
-                    <FileText className="w-5 h-5" />
-                    <span className="text-[16px]">My Requests</span>
-                  </div>
-                  <span className="text-[13px] pl-8 text-gray-500">मेरी रिक्वेस्ट</span>
-                </Link>
-                <button
-                  onClick={() => { logout(); setIsOpen(false); }}
-                  className="w-full text-left flex flex-col px-4 py-3 text-primary hover:bg-red-50 rounded-xl transition-all"
-                >
-                  <div className="flex items-center gap-3">
-                    <LogOut className="w-5 h-5" />
-                    <span className="text-[16px] font-bold">Sign Out</span>
-                  </div>
-                  <span className="text-[13px] pl-8 opacity-70">साइन आउट</span>
-                </button>
-              </div>
-            ) : (
-              <div className="space-y-4 pt-2">
-                <button
-                  onClick={() => { openAuthModal(); setIsOpen(false); }}
-                  className="w-full text-left flex flex-col px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-xl transition-all"
-                >
-                  <div className="flex items-center gap-3">
-                    <LogIn className="w-5 h-5" />
-                    <span className="text-[16px] font-bold">Sign In</span>
-                  </div>
-                  <span className="text-[13px] pl-8 opacity-70">साइन इन</span>
-                </button>
-                <a
-                  href="https://wa.me/919241562747"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center mx-3 px-6 py-3 rounded-xl text-white bg-primary hover:bg-primary-dark shadow-md transition-all active:scale-95"
-                >
-                  <span className="text-[16px] font-bold">WhatsApp Us</span>
-                  <span className="text-[13px] opacity-90">हमें व्हाट्सएप करें</span>
-                </a>
-              </div>
-            )}
+            <div className="space-y-4 pt-4">
+              <a
+                href="https://wa.me/919241562747"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center justify-center mx-3 px-6 py-3 rounded-xl text-white bg-primary hover:bg-primary-dark shadow-md transition-all active:scale-95"
+              >
+                <span className="text-[16px] font-bold">WhatsApp Us</span>
+                <span className="text-[13px] opacity-90">हमें व्हाट्सएप करें</span>
+              </a>
+            </div>
           </div>
         </div>
       )}

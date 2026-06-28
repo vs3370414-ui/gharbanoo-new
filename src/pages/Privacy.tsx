@@ -189,8 +189,8 @@ export function Privacy() {
                   <p className="text-sm text-gray-400 italic"><strong>पहुंच और अपडेट</strong>: आप किसी भी समय सीधे ऐप के भीतर अपना प्रोफ़ाइल नाम संपादित कर सकते हैं, अपना स्थान बदल सकते हैं, या अपनी पसंद की वस्तुओं को संशोधित कर सकते हैं।</p>
                 </li>
                 <li className="space-y-1">
-                  <p><strong>Account Deletion</strong>: If you wish to delete your account data, you can do so by logging out and clearing your app data, or by contacting us at <a href="mailto:support@gharbanoo.com" className="text-primary underline">support@gharbanoo.com</a>.</p>
-                  <p className="text-sm text-gray-400 italic"><strong>खाता हटाना</strong>: यदि आप अपने खाते का डेटा हटाना चाहते हैं, तो आप लॉग आउट करके और अपने ऐप डेटा को साफ़ करके, या <a href="mailto:support@gharbanoo.com" className="text-primary underline">support@gharbanoo.com</a> पर हमसे संपर्क करके ऐसा कर सकते हैं।</p>
+                  <p><strong>Account Deletion</strong>: If you wish to delete your account data, you can do so by logging out and clearing your app data, or by contacting us at <a href="mailto:gharbanoo@gmail.com" className="text-primary underline">gharbanoo@gmail.com</a>.</p>
+                  <p className="text-sm text-gray-400 italic"><strong>खाता हटाना</strong>: यदि आप अपने खाते का डेटा हटाना चाहते हैं, तो आप लॉग आउट करके और अपने ऐप डेटा को साफ़ करके, या <a href="mailto:gharbanoo@gmail.com" className="text-primary underline">gharbanoo@gmail.com</a> पर हमसे संपर्क करके ऐसा कर सकते हैं।</p>
                 </li>
               </ul>
             </div>
@@ -213,9 +213,9 @@ export function Privacy() {
               <div className="bg-gray-50 border border-gray-200 p-6 rounded-2xl inline-block mt-2">
                 <p className="font-bold text-gray-900">Gharbanoo Support</p>
                 <p className="text-sm text-gray-500 mt-1">
-                  Email: <a href="mailto:support@gharbanoo.com" className="text-primary hover:underline font-bold">support@gharbanoo.com</a>
+                  Email: <a href="mailto:gharbanoo@gmail.com" className="text-primary hover:underline font-bold">gharbanoo@gmail.com</a>
                 </p>
-                <p className="text-xs text-gray-400 mt-1">ईमेल: support@gharbanoo.com</p>
+                <p className="text-xs text-gray-400 mt-1">ईमेल: gharbanoo@gmail.com</p>
               </div>
             </div>
           </div>
