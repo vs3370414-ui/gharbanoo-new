@@ -3,23 +3,23 @@ import React from 'react';
 interface GooglePlayButtonProps {
   className?: string;
   variant?: 'dark' | 'light';
+  compact?: boolean;
 }
 
-export function GooglePlayButton({ className = '', variant = 'dark' }: GooglePlayButtonProps) {
+export function GooglePlayButton({ className = '', variant = 'dark', compact = false }: GooglePlayButtonProps) {
   const isDark = variant === 'dark';
   
   return (
     <a
-      href="https://play.google.com/store/apps/details?id=com.gharbanoo.app"
+      href="https://play.google.com/store/apps/details?id=com.gharbanoo.gharbanoo"
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex items-center gap-3 px-5 py-2.5 rounded-xl border transition-all active:scale-95 shadow-sm hover:shadow-md ${
+      className={`inline-flex items-center gap-3 px-5 py-2.5 rounded-xl border transition-all active:scale-95 shadow-sm hover:shadow-md ${compact ? 'py-2 px-3' : ''} ${
         isDark 
           ? 'bg-black text-white hover:bg-zinc-900 border-zinc-800' 
           : 'bg-white text-dark hover:bg-gray-50 border-gray-200'
       } ${className}`}
     >
-      {/* Official Google Play Icon in vector SVG */}
       <svg 
         viewBox="0 0 512 512" 
         className="w-6 h-6 shrink-0" 
@@ -46,10 +46,10 @@ export function GooglePlayButton({ className = '', variant = 'dark' }: GooglePla
       
       <div className="flex flex-col items-start text-left leading-none">
         <span className={`text-[9px] font-bold uppercase tracking-widest ${isDark ? 'text-zinc-400' : 'text-gray-500'}`}>
-          GET IT ON
+          {compact ? 'ANDROID APP' : 'GET IT ON'}
         </span>
         <span className={`text-base font-black tracking-tight mt-0.5 ${isDark ? 'text-white' : 'text-dark'}`}>
-          Google Play
+          {compact ? 'Get the app' : 'Google Play'}
         </span>
       </div>
     </a>

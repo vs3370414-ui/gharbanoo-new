@@ -1,34 +1,6 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
-
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Layout } from './components/layout/Layout';
 import { Home } from './pages/Home';
-import { FindShops } from './pages/FindShops';
-import { FindServices } from './pages/FindServices';
-import { JoinProvider } from './pages/JoinProvider';
-import { About } from './pages/About';
-import { Contact } from './pages/Contact';
 import { Privacy } from './pages/Privacy';
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Layout />,
-    children: [
-      { index: true, element: <Home /> },
-      { path: "find-shops", element: <FindShops /> },
-      { path: "find-services", element: <FindServices /> },
-      { path: "join-provider", element: <JoinProvider /> },
-      { path: "about", element: <About /> },
-      { path: "contact", element: <Contact /> },
-      { path: "privacy", element: <Privacy /> },
-    ],
-  },
-]);
-
-export default function App() {
-  return <RouterProvider router={router} />;
-}
+const router = createBrowserRouter([{ path: '/', element: <Layout />, children: [{ index: true, element: <Home /> }, { path: 'privacy', element: <Privacy /> }] }]);
+export default function App() { return <RouterProvider router={router} />; }
