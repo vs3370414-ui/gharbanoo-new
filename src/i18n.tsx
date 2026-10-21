@@ -68,7 +68,13 @@ const en = {
   ],
 
   shotsTitle: 'A look inside the app',
-  shots: ['Find experts near your pincode', 'Step-by-step building guide', 'Made for homeowners, experts and shops'],
+  shots: [
+    'Everything for your home in one place',
+    'Step-by-step building guide',
+    'Experts near you, with rates and reviews',
+    'Material shops near you',
+    'Compare experts side by side',
+  ],
 
   trustTitle: 'Why homeowners choose GharBanoo',
   trust: [
@@ -178,7 +184,13 @@ const hi: Copy = {
   ],
 
   shotsTitle: 'ऐप की एक झलक',
-  shots: ['अपने पिनकोड के पास एक्सपर्ट खोजें', 'चरण-दर-चरण निर्माण गाइड', 'घर मालिक, एक्सपर्ट और दुकानदार, सबके लिए'],
+  shots: [
+    'घर बनाने की हर ज़रूरत, एक जगह',
+    'चरण-दर-चरण निर्माण गाइड',
+    'पास के एक्सपर्ट, रेट और रिव्यू के साथ',
+    'पास की मटेरियल दुकानें',
+    'एक्सपर्ट्स की आपस में तुलना करें',
+  ],
 
   trustTitle: 'घर मालिक GharBanoo क्यों चुनते हैं',
   trust: [

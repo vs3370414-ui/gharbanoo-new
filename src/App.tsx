@@ -116,17 +116,26 @@ function Hero({ ctaRef }: { ctaRef: React.RefObject<HTMLDivElement | null> }) {
           </ul>
         </div>
         <div className="hero-visual">
-          <Phone src="/images/screen-home.jpg" alt={t.shots[0]} eager />
+          <Mockup {...mockups[0]} alt={t.shots[0]} eager />
         </div>
       </div>
     </section>
   );
 }
 
-function Phone({ src, alt, eager = false }: { src: string; alt: string; eager?: boolean }) {
+// App mockups already include the phone frame; sizes are the files' real pixels.
+const mockups = [
+  { src: '/images/mockup-home.webp', w: 716, h: 1456 },
+  { src: '/images/mockup-guide.webp', w: 715, h: 1451 },
+  { src: '/images/mockup-browse.webp', w: 742, h: 1472 },
+  { src: '/images/mockup-shops.webp', w: 724, h: 1338 },
+  { src: '/images/mockup-compare.webp', w: 715, h: 1466 },
+];
+
+function Mockup({ src, w, h, alt, eager = false }: { src: string; w: number; h: number; alt: string; eager?: boolean }) {
   return (
-    <div className="phone">
-      <img src={src} alt={alt} width="540" height="1200" loading={eager ? 'eager' : 'lazy'} decoding="async" />
+    <div className="mockup">
+      <img src={src} alt={alt} width={w} height={h} loading={eager ? 'eager' : 'lazy'} decoding="async" />
     </div>
   );
 }
@@ -227,8 +236,6 @@ function HowItWorks() {
   );
 }
 
-const screenFiles = ['/images/screen-home.jpg', '/images/screen-sequence.jpg', '/images/screen-roles.jpg'];
-
 function Screens() {
   const { t } = useLang();
   return (
@@ -236,9 +243,9 @@ function Screens() {
       <div className="wrap">
         <SectionHead title={t.shotsTitle} />
         <div className="screens">
-          {screenFiles.map((src, i) => (
-            <figure key={src}>
-              <Phone src={src} alt={t.shots[i]} />
+          {mockups.map((mockup, i) => (
+            <figure key={mockup.src}>
+              <Mockup {...mockup} alt={t.shots[i]} />
               <figcaption>{t.shots[i]}</figcaption>
             </figure>
           ))}

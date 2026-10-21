@@ -342,23 +342,15 @@ p {
   justify-content: center;
 }
 
-.hero-visual .phone {
+.hero-visual .mockup {
   width: min(280px, 72vw);
-  transform: rotate(2deg);
 }
 
-.phone {
-  background: #151515;
-  padding: 10px;
-  border-radius: 36px;
-  box-shadow: 0 30px 60px rgba(29, 27, 26, 0.22), 0 0 0 1px rgba(0, 0, 0, 0.08);
-}
-
-.phone img {
+/* Mockup files already contain the phone frame; only add a soft shadow. */
+.mockup img {
   width: 100%;
   height: auto;
-  border-radius: 27px;
-  background: var(--bg);
+  filter: drop-shadow(0 24px 32px rgba(29, 27, 26, 0.18));
 }
 
 /* Sections */
@@ -503,6 +495,7 @@ p {
 /* Screenshots */
 .screens {
   display: flex;
+  align-items: flex-end;
   gap: 20px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -512,7 +505,7 @@ p {
 
 .screens figure {
   flex: 0 0 auto;
-  width: 220px;
+  width: 200px;
   margin: 0;
   scroll-snap-align: center;
   text-align: center;
@@ -792,8 +785,8 @@ p {
     gap: 56px;
   }
 
-  .hero-visual .phone {
-    width: 300px;
+  .hero-visual .mockup {
+    width: 320px;
   }
 
   .grid-4,
@@ -811,7 +804,7 @@ p {
   }
 
   .screens figure {
-    width: 250px;
+    width: 200px;
   }
 
   .sticky-install {
