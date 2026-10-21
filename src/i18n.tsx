@@ -17,7 +17,7 @@ const en = {
   heroEyebrow: 'For families building their first home',
   heroTitle: 'Build your home with people you can trust.',
   heroLead:
-    'Find masons, contractors, plumbers, electricians and building-material shops near you. See their work and reviews, then call them directly. Free, with no commission.',
+    'Find masons, contractors, plumbers, electricians and building-material shops near you. See their work and reviews, then call them directly. Free, with no middleman.',
   heroMeta: ['Free for homeowners', 'No middleman', 'Hindi & English'],
   playSmall: 'GET IT ON',
   playBig: 'Google Play',
@@ -35,7 +35,7 @@ const en = {
     },
     {
       q: '“Am I paying too much?”',
-      a: 'Compare experts and their visit fees side by side. You talk and pay them directly, so no one adds a commission in between.',
+      a: 'Compare experts and their visit fees side by side. You talk and pay them directly, with no middleman in between.',
     },
   ],
 
@@ -64,7 +64,7 @@ const en = {
     ['Install GharBanoo', 'Free on Google Play. Choose “I need services / material”.'],
     ['Set your area', 'Enter your pincode to see experts and shops near you.'],
     ['Compare', 'Check work photos, experience, ratings and visit fees.'],
-    ['Call or WhatsApp', 'Talk directly and fix the visit. No middleman, no commission.'],
+    ['Call or WhatsApp', 'Talk directly and fix the visit. No middleman.'],
   ],
 
   shotsTitle: 'A look inside the app',
@@ -77,7 +77,7 @@ const en = {
   trustTitle: 'Why homeowners choose GharBanoo',
   trust: [
     ['Free for you', 'Homeowners never pay to use GharBanoo.'],
-    ['Zero commission', 'You deal with the expert or shop directly, at fair rates.'],
+    ['Deal directly', 'You deal with the expert or shop directly, at fair rates.'],
     ['Checked by our team', 'Profiles and reviews are reviewed before they appear. Look for the verified badge.'],
     ['Simple sign-in', 'Browse without an account. Sign in with Google only when you need to.'],
   ],
@@ -93,7 +93,7 @@ const en = {
   ],
 
   proTitle: 'Are you a mason, contractor or material shop?',
-  proText: 'Show your work to homeowners near you and get direct calls. Listing is free and we take no commission.',
+  proText: 'Show your work to homeowners near you and get direct calls. Listing is free.',
   proCta: 'Join free on the app',
 
   finalTitle: 'Start your home the right way.',
@@ -131,7 +131,7 @@ const hi: Copy = {
   heroEyebrow: 'पहली बार घर बनाने वाले परिवारों के लिए',
   heroTitle: 'भरोसेमंद लोगों के साथ अपना घर बनाइए।',
   heroLead:
-    'अपने पास के राजमिस्त्री, ठेकेदार, प्लंबर, बिजली कारीगर और मटेरियल की दुकानें खोजें। उनका काम और रिव्यू देखें, फिर सीधे कॉल करें। बिल्कुल मुफ़्त, कोई कमीशन नहीं।',
+    'अपने पास के राजमिस्त्री, ठेकेदार, प्लंबर, बिजली कारीगर और मटेरियल की दुकानें खोजें। उनका काम और रिव्यू देखें, फिर सीधे कॉल करें। बिल्कुल मुफ़्त, कोई बिचौलिया नहीं।',
   heroMeta: ['घर मालिकों के लिए मुफ़्त', 'कोई बिचौलिया नहीं', 'हिंदी और English'],
   playSmall: 'डाउनलोड करें',
   playBig: 'Google Play',
@@ -149,7 +149,7 @@ const hi: Copy = {
     },
     {
       q: '“कहीं ज़्यादा पैसे तो नहीं दे रहे?”',
-      a: 'एक्सपर्ट्स और उनकी विज़िट फीस की आपस में तुलना करें। बात और भुगतान सीधे उनसे होता है, बीच में कोई कमीशन नहीं।',
+      a: 'एक्सपर्ट्स और उनकी विज़िट फीस की आपस में तुलना करें। बात और भुगतान सीधे उनसे होता है, बीच में कोई बिचौलिया नहीं।',
     },
   ],
 
@@ -178,7 +178,7 @@ const hi: Copy = {
     ['GharBanoo इंस्टॉल करें', 'Google Play पर मुफ़्त। “मुझे सेवा / मटेरियल चाहिए” चुनें।'],
     ['अपना इलाका चुनें', 'पिनकोड डालें और पास के एक्सपर्ट व दुकानें देखें।'],
     ['तुलना करें', 'काम की फोटो, अनुभव, रेटिंग और विज़िट फीस देखें।'],
-    ['कॉल या WhatsApp करें', 'सीधे बात करें और विज़िट तय करें। न बिचौलिया, न कमीशन।'],
+    ['कॉल या WhatsApp करें', 'सीधे बात करें और विज़िट तय करें। कोई बिचौलिया नहीं।'],
   ],
 
   shotsTitle: 'ऐप की एक झलक',
@@ -191,7 +191,7 @@ const hi: Copy = {
   trustTitle: 'घर मालिक GharBanoo क्यों चुनते हैं',
   trust: [
     ['आपके लिए मुफ़्त', 'घर मालिकों को GharBanoo के लिए कभी पैसे नहीं देने होते।'],
-    ['शून्य कमीशन', 'एक्सपर्ट या दुकान से सीधे, उचित दाम पर बात करें।'],
+    ['सीधी डील', 'एक्सपर्ट या दुकान से सीधे, उचित दाम पर बात करें।'],
     ['हमारी टीम द्वारा जांचा गया', 'प्रोफ़ाइल और रिव्यू दिखने से पहले जांचे जाते हैं। वेरिफ़ाइड बैज देखें।'],
     ['आसान साइन-इन', 'बिना अकाउंट के देखें। ज़रूरत हो तभी Google से साइन-इन करें।'],
   ],
@@ -207,7 +207,7 @@ const hi: Copy = {
   ],
 
   proTitle: 'क्या आप राजमिस्त्री, ठेकेदार या मटेरियल दुकानदार हैं?',
-  proText: 'अपने पास के घर मालिकों को अपना काम दिखाएं और सीधे कॉल पाएं। लिस्टिंग मुफ़्त है, कोई कमीशन नहीं।',
+  proText: 'अपने पास के घर मालिकों को अपना काम दिखाएं और सीधे कॉल पाएं। लिस्टिंग मुफ़्त है।',
   proCta: 'ऐप पर मुफ़्त जुड़ें',
 
   finalTitle: 'अपने घर की शुरुआत सही तरीके से करें।',
