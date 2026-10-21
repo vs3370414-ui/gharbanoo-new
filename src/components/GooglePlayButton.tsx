@@ -1,57 +1,38 @@
-import React from 'react';
+import { playStoreUrl } from '../links';
+import { useLang } from '../i18n';
 
 interface GooglePlayButtonProps {
-  className?: string;
+  /** Where on the page the button sits; sent to Play as utm_medium. */
+  placement: string;
   variant?: 'dark' | 'light';
-  compact?: boolean;
 }
 
-export function GooglePlayButton({ className = '', variant = 'dark', compact = false }: GooglePlayButtonProps) {
-  const isDark = variant === 'dark';
-  
+export function PlayLogo({ size = 26 }: { size?: number }) {
+  return (
+    <svg viewBox="0 0 24 24" width={size} height={size} aria-hidden="true">
+      <path d="M3.6 2.2 13.4 12l-9.8 9.8c-.4-.2-.6-.6-.6-1.1V3.3c0-.5.2-.9.6-1.1Z" fill="#00C3FF" />
+      <path d="M3.6 2.2c.4-.2.9-.2 1.4.1l11.6 6.6-3.2 3.1Z" fill="#00E676" />
+      <path d="m16.6 8.9 3.6 2c.9.5.9 1.7 0 2.2l-3.6 2-3.2-3.1Z" fill="#FFC400" />
+      <path d="m13.4 12 3.2 3.1L5 21.7c-.5.3-1 .3-1.4.1Z" fill="#FF3A44" />
+    </svg>
+  );
+}
+
+export function GooglePlayButton({ placement, variant = 'dark' }: GooglePlayButtonProps) {
+  const { t } = useLang();
   return (
     <a
-      href="https://play.google.com/store/apps/details?id=com.gharbanoo.gharbanoo"
+      className={`play-btn play-btn-${variant}`}
+      href={playStoreUrl(placement)}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex items-center gap-3 px-5 py-2.5 rounded-xl border transition-all active:scale-95 shadow-sm hover:shadow-md ${compact ? 'py-2 px-3' : ''} ${
-        isDark 
-          ? 'bg-black text-white hover:bg-zinc-900 border-zinc-800' 
-          : 'bg-white text-dark hover:bg-gray-50 border-gray-200'
-      } ${className}`}
+      aria-label={`${t.playSmall} Google Play`}
     >
-      <svg 
-        viewBox="0 0 512 512" 
-        className="w-6 h-6 shrink-0" 
-        fill="none" 
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path 
-          d="M32.5 31.7c-.5 1-.8 2.2-.8 3.5v441.6c0 1.3.3 2.5.8 3.5l1.1 1.1L257.6 256 33.6 30.6l-1.1 1.1z" 
-          fill="#00E5FF" 
-        />
-        <path 
-          d="M394.3 120.3L257.6 256 33.6 30.6c3.4-3.5 9-3.5 15-1.5l345.7 191.2z" 
-          fill="#FF3D00" 
-        />
-        <path 
-          d="M34.7 481.4c-1.3-1-2.2-2.5-2.2-4.1l225.1-221.3L394.3 391.7 48.6 482.9c-6.1 3.4-11.4 1.9-13.9-1.5z" 
-          fill="#4CAF50" 
-        />
-        <path 
-          d="M503.7 236.4l-109.4-60.5-136.7 136.7 136.7 136.7 109.4-60.5c16.1-9 16.1-23.7 0-32.4z" 
-          fill="#FFEB3B" 
-        />
-      </svg>
-      
-      <div className="flex flex-col items-start text-left leading-none">
-        <span className={`text-[9px] font-bold uppercase tracking-widest ${isDark ? 'text-zinc-400' : 'text-gray-500'}`}>
-          {compact ? 'ANDROID APP' : 'GET IT ON'}
-        </span>
-        <span className={`text-base font-black tracking-tight mt-0.5 ${isDark ? 'text-white' : 'text-dark'}`}>
-          {compact ? 'Get the app' : 'Google Play'}
-        </span>
-      </div>
+      <PlayLogo />
+      <span className="play-btn-text">
+        <small>{t.playSmall}</small>
+        <strong>{t.playBig}</strong>
+      </span>
     </a>
   );
 }

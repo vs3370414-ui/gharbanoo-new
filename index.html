@@ -3,28 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GharBanoo — Local life, made easier.</title>
-    <meta name="description" content="GharBanoo is building a more dependable digital layer for discovering and connecting with everyday local services." />
+    <title>GharBanoo – Build your home with trusted local experts</title>
+    <meta name="description" content="Building your first home? Find trusted masons, contractors, plumbers, electricians and material shops near you on the free GharBanoo app. See their work and reviews, then call directly. No commission." />
     <meta name="robots" content="index,follow" />
-    <meta name="theme-color" content="#17223a" />
+    <meta name="theme-color" content="#D81920" />
     <link rel="canonical" href="https://gharbanoo.com/" />
-    <meta property="og:title" content="GharBanoo — Local life, made easier." />
-    <meta property="og:description" content="The digital layer for everyday local services." />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+    <meta property="og:site_name" content="GharBanoo" />
+    <meta property="og:title" content="GharBanoo – Build your home with trusted local experts" />
+    <meta property="og:description" content="Find trusted masons, contractors, plumbers and material shops near you. Free app, no commission. घर का पहला कदम।" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://gharbanoo.com/" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="GharBanoo — Local life, made easier." />
-    <meta name="twitter:description" content="The digital layer for everyday local services." />
+    <meta property="og:image" content="https://gharbanoo.com/images/og-image.jpg" />
+    <meta property="og:image:width" content="1024" />
+    <meta property="og:image:height" content="500" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:locale:alternate" content="hi_IN" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="GharBanoo – Build your home with trusted local experts" />
+    <meta name="twitter:description" content="Find trusted masons, contractors, plumbers and material shops near you. Free app, no commission." />
+    <meta name="twitter:image" content="https://gharbanoo.com/images/og-image.jpg" />
+    <meta name="google-play-app" content="app-id=com.gharbanoo.gharbanoo" />
     <script type="application/ld+json">
-      {"@context":"https://schema.org","@type":"Organization","name":"GharBanoo","url":"https://gharbanoo.com/","description":"GharBanoo is building a more dependable digital layer for discovering and connecting with everyday local services.","sameAs":["https://play.google.com/store/apps/details?id=com.gharbanoo.gharbanoo"]}
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "name": "GharBanoo",
+            "legalName": "GharBanoo Technologies Private Limited",
+            "url": "https://gharbanoo.com/",
+            "logo": "https://gharbanoo.com/images/app-icon-512.png",
+            "email": "gharbanoo@gmail.com",
+            "sameAs": ["https://play.google.com/store/apps/details?id=com.gharbanoo.gharbanoo"]
+          },
+          {
+            "@type": "MobileApplication",
+            "name": "GharBanoo",
+            "operatingSystem": "ANDROID",
+            "applicationCategory": "LifestyleApplication",
+            "installUrl": "https://play.google.com/store/apps/details?id=com.gharbanoo.gharbanoo",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+          }
+        ]
+      }
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="preload" as="image" href="/images/screen-home.jpg" />
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <noscript>
+        <p style="font-family:sans-serif;padding:24px">
+          GharBanoo helps families find trusted masons, contractors, plumbers, electricians and material shops near them.
+          <a href="https://play.google.com/store/apps/details?id=com.gharbanoo.gharbanoo">Get the free app on Google Play</a>.
+        </p>
+      </noscript>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-

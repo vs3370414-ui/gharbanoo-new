@@ -1,20 +1,18 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# GharBanoo website
 
-# Run and deploy your AI Studio app
+Source for https://gharbanoo.com, hosted free on Netlify (`netlify.toml`).
 
-This contains everything you need to run your app locally.
+The site's job is to bring homeowners to the GharBanoo Android app. It has no listings or sign-in.
 
-View your app in AI Studio: https://ai.studio/apps/dc02428b-b9e6-4f8e-b4a1-f550253ec433
+- `/`: landing page (React + Vite, English/Hindi). Text lives in `src/i18n.tsx`; links in `src/links.ts`.
+- `/privacy/`, `/terms/`, `/delete-account/`: static HTML in `public/`, styled by `public/legal.css`.
+  The app and Play Console link to `/privacy` and `/delete-account`; never move them.
 
-## Run Locally
+```bash
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # outputs dist/
+```
 
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Play Store links carry `utm_source=website&utm_medium=<section>`; see installs by source in
+Play Console → Grow → Store analysis.
