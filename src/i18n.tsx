@@ -84,7 +84,7 @@ const en = {
 
   faqTitle: 'Questions homeowners ask',
   faqs: [
-    ['Is GharBanoo really free?', 'Yes. GharBanoo is free for homeowners, and we take no commission from experts or shops either.'],
+    ['Is GharBanoo really free?', 'Yes, it is free.'],
     ['Do I pay through the app?', 'No. You agree on the work and the price with the expert or shop yourself, and pay them directly. We recommend agreeing on the price before work starts.'],
     ['How are experts checked?', 'Every expert and shop profile, and every review, is checked by our team before it is shown. Profiles we have verified carry a verified badge.'],
     ['Is it available in my area?', 'Open the app and set your pincode to see who is near you. New local experts and shops are joining all the time.'],
@@ -198,7 +198,7 @@ const hi: Copy = {
 
   faqTitle: 'घर मालिकों के सवाल',
   faqs: [
-    ['क्या GharBanoo सच में मुफ़्त है?', 'हां। घर मालिकों के लिए GharBanoo मुफ़्त है, और हम एक्सपर्ट या दुकानों से भी कोई कमीशन नहीं लेते।'],
+    ['क्या GharBanoo सच में मुफ़्त है?', 'हां, यह मुफ़्त है।'],
     ['क्या भुगतान ऐप से होता है?', 'नहीं। काम और दाम आप खुद एक्सपर्ट या दुकान से तय करते हैं और सीधे उन्हें भुगतान करते हैं। काम शुरू होने से पहले दाम तय कर लें।'],
     ['एक्सपर्ट्स की जांच कैसे होती है?', 'हर एक्सपर्ट और दुकान की प्रोफ़ाइल, और हर रिव्यू, दिखाने से पहले हमारी टीम जांचती है। जांची गई प्रोफ़ाइल पर वेरिफ़ाइड बैज होता है।'],
     ['क्या मेरे इलाके में उपलब्ध है?', 'ऐप खोलें और पिनकोड डालें, पास के लोग दिख जाएंगे। नए लोकल एक्सपर्ट और दुकानें लगातार जुड़ रहे हैं।'],
