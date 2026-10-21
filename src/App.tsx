@@ -127,8 +127,6 @@ function Hero({ ctaRef }: { ctaRef: React.RefObject<HTMLDivElement | null> }) {
 const mockups = [
   { src: '/images/mockup-home.webp', w: 716, h: 1456 },
   { src: '/images/mockup-guide.webp', w: 715, h: 1451 },
-  { src: '/images/mockup-browse.webp', w: 742, h: 1472 },
-  { src: '/images/mockup-shops.webp', w: 724, h: 1338 },
   { src: '/images/mockup-compare.webp', w: 715, h: 1466 },
 ];
 

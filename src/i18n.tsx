@@ -71,8 +71,6 @@ const en = {
   shots: [
     'Everything for your home in one place',
     'Step-by-step building guide',
-    'Experts near you, with rates and reviews',
-    'Material shops near you',
     'Compare experts side by side',
   ],
 
@@ -187,8 +185,6 @@ const hi: Copy = {
   shots: [
     'घर बनाने की हर ज़रूरत, एक जगह',
     'चरण-दर-चरण निर्माण गाइड',
-    'पास के एक्सपर्ट, रेट और रिव्यू के साथ',
-    'पास की मटेरियल दुकानें',
     'एक्सपर्ट्स की आपस में तुलना करें',
   ],
 
